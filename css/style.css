@@ -24,14 +24,21 @@
 .boxes {
     display: flex;
     flex-wrap: wrap;
-    margin-left: 35%;
+    justify-content: flex-end;
+}
+
+.six-day {
+    justify-content: right;
+}
+.multi-day {
+    margin-left: 40px;
 }
 
 .card {
     position: relative;
     display: flex;
     flex-direction: column;
-    width: 65%;
+    width: 50%;
     padding: 1.25rem;
     word-wrap: break-word;
     background-color: #ffff;

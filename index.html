@@ -1,76 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="./css/style.css" />
     <title>Weather API</title>
-</head>
-<body>
+  </head>
+
+  <body>
     <header>
-        <h1 id="title" class="header">Local Weather Forcast</h1>
+      <h1 id="title" class="header">Local Weather Forcast</h1>
     </header>
-    <aside>
-        <input
-        placeholder="Search"/>
+
+    <div class="row">
+      <div class="col-3 m-2 bg-light side">
+        <div class="search">Search by City</div>
+        <input 
+        placeholder="Search" />
         <button class="submitBtn" type="submit">Submit</button>
-    </aside>
-    <div>
-        <h2 id="cityname" class="city">
-            San Francisco
-        </h2>
-        <h2 id="temp" class="temperature">
-            98*
-        </h2>
-        <h2 id="wind" class="chill">
-            20mph
-        </h2>
-        <h2 id="humidity" class="humid">
-            100%
-        </h2>
-        <h2 id="UV" class="rays">
-            .047
-        </h2>
-    </div>
-    <div>
-        <card>
-            <h3 id="date">Today's Date</h3>
-            <h4 id="emoji">emoji</h4>
-            <h4 id="temp2">Temp</h4>
-            <h4 id="wind2">Wind</h4>
-            <h4 id="humid2">Humidity</h4>
+      </div>
+
+      <div class="col-8 m-2">
+        <div class="row-12">
+          <div class="card" class="current-info">
+            <h2 id="cityname" class="city">San Francisco</h2>
+            <h2 id="temp" class="temperature">98*</h2>
+            <h2 id="wind" class="chill">20mph</h2>
+            <h2 id="humidity" class="humid">100%</h2>
+            <h2 id="UV" class="rays">.047</h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="row-12">
+        <h3>6 Day Forecast:</h3>
+      </div>
+      <div id="grid" class="boxes">
+        <card class="col-3 m-2 bg-light">
+          <h4 id="date">Today's Date</h4>
+          <h5 id="emoji">emoji</h5>
+          <h5 id="temp2">Temp</h5>
+          <h5 id="wind2">Wind</h5>
+          <h5 id="humid2">Humidity</h5>
         </card>
-        <card>
-            <h3 id="date">Today's Date</h3>
-            <h4 id="emoji">emoji</h4>
-            <h4 id="temp2">Temp</h4>
-            <h4 id="wind2">Wind</h4>
-            <h4 id="humid2">Humidity</h4>
+        <card class="col-3 m-2 bg-light">
+          <h4 id="date">Today's Date</h4>
+          <h5 id="emoji">emoji</h5>
+          <h5 id="temp2">Temp</h5>
+          <h5 id="wind2">Wind</h5>
+          <h5 id="humid2">Humidity</h5>
         </card>
-        <card>
-            <h3 id="date">Today's Date</h3>
-            <h4 id="emoji">emoji</h4>
-            <h4 id="temp2">Temp</h4>
-            <h4 id="wind2">Wind</h4>
-            <h4 id="humid2">Humidity</h4>
+        <card class="col-3 m-2 bg-light">
+          <h4 id="date">Today's Date</h4>
+          <h5 id="emoji">emoji</h5>
+          <h5 id="temp2">Temp</h5>
+          <h5 id="wind2">Wind</h5>
+          <h5 id="humid2">Humidity</h5>
         </card>
-        <card>
-            <h3 id="date">Today's Date</h3>
-            <h4 id="emoji">emoji</h4>
-            <h4 id="temp2">Temp</h4>
-            <h4 id="wind2">Wind</h4>
-            <h4 id="humid2">Humidity</h4>
+        <card class="col-3 m-2 bg-light">
+          <h4 id="date">Today's Date</h4>
+          <h5 id="emoji">emoji</h5>
+          <h5 id="temp2">Temp</h5>
+          <h5 id="wind2">Wind</h5>
+          <h5 id="humid2">Humidity</h5>
         </card>
-        <card>
-            <h3 id="date">Today's Date</h3>
-            <h4 id="emoji">emoji</h4>
-            <h4 id="temp2">Temp</h4>
-            <h4 id="wind2">Wind</h4>
-            <h4 id="humid2">Humidity</h4>
+        <card class="col-3 m-2 bg-light">
+          <h4 id="date">Today's Date</h4>
+          <h5 id="emoji">emoji</h5>
+          <h5 id="temp2">Temp</h5>
+          <h5 id="wind2">Wind</h5>
+          <h5 id="humid2">Humidity</h5>
         </card>
+        <card class="col-3 m-2 bg-light">
+            <h4 id="date">Today's Date</h4>
+            <h5 id="emoji">emoji</h5>
+            <h5 id="temp2">Temp</h5>
+            <h5 id="wind2">Wind</h5>
+            <h5 id="humid2">Humidity</h5>
+          </card>
+      </div>
     </div>
 
-<script src="js/script.js"></script>
-</body>
+    <script src="js/script.js"></script>
+  </body>
 </html>
